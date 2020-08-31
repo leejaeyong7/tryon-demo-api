@@ -1,0 +1,124 @@
+<!doctype html>
+<!-- Author: Jae Yong Lee -->
+<!-- License: Permitted to Use as long as it attibutes the original author. -->
+<html lang="en" class="h-100">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+
+    <title>Tryon Demo Page!</title>
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+
+      .card-main-image{
+        max-width: 200px;
+      }
+      .hidden{
+        display: none !important;
+      }
+    </style>
+    <style>
+        /* Custom page CSS
+        -------------------------------------------------- */
+        /* Not required for template or sticky footer method. */
+
+        main > .container {
+          padding: 60px 15px 0;
+        }
+
+        .footer {
+          background-color: #f5f5f5;
+        }
+
+        .footer > .container {
+          padding-right: 15px;
+          padding-left: 15px;
+        }
+
+        code {
+          font-size: 80%;
+        }
+
+        .tryon-tryout-container{
+          cursor: pointer;
+        }
+
+    </style>
+  </head>
+  <body class="d-flex flex-column h-100">
+    <header>
+      <!-- Fixed navbar -->
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <a class="navbar-brand" href="#">Tryon Demo</a>
+      </nav>
+    </header>
+
+    <!-- Begin page content -->
+    <main role="main" class="flex-shrink-0">
+      <div class="container">
+        <div class="card text-center">
+          <div class="card-header">
+            Press Cloths on the bottom to try it on!
+          </div>
+          <div class="card-body">
+            <div id="card-loading" class="d-flex justify-content-center">
+              <div class="spinner-border" role="status">
+                <span class="sr-only">Loading...</span>
+              </div>
+            </div>
+            <div id="card-loaded">
+              <h5 id="tryon-id" class="card-title"></h5>
+              <img id="tryon-main-image" src="" class="img-thumbnail">
+              <h5>Select Images Below To Apply</h5>
+              <div id="tryon-tryout-row" class="row">
+                <div class="tryon-tryout-container col-6 col-md-4">
+                  <img class="tryon-tryout-image" src="">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="card-footer text-right">
+            <button id="tryon-next-button" type="button" class="btn btn-primary">Next</button>
+          </div>
+        </div>
+
+      </div>
+    </main>
+
+    <footer class="footer mt-auto py-3">
+      <div class="container">
+        <div style="float: right">
+          <a href="#">Back to Top</a>
+        </div>
+        <span class="text-muted">Tryon API Demo Test by Jae</span>
+      </div>
+    </footer>
+
+    <!-- Optional JavaScript -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script src="scripts/api.js"></script>
+    <script src="scripts/tryon.js"></script>
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+  </body>
+</html>
