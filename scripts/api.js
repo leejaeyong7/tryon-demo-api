@@ -1,6 +1,7 @@
 /**
  * Try-on demo API usage for javascript
  * This page expects ECMAScript 2019+
+ * I am sorry for the lack of comments! (Busy day)
  * @author: Jae Yong Lee(lee896@illinois.edu)
  */
 
@@ -29,7 +30,7 @@ API_URL = `${API_PROTOCOL}://${API_HOST}:${API_PORT}`;
  *         recommendation_dict(str): category map to list of recommended product ids
  *      }
  */
-async function get_model_metadata(model_file=null){
+async function getModelMetadata(model_file=null){
   const params = {};
   if(model_file === null){
     params.model_file = model_file
@@ -42,24 +43,15 @@ async function get_model_metadata(model_file=null){
   }
 }
 
-/**
- *
- *
- */
-function get_image_url(model_file){
-  return `${API_URL}/get_image?model_file=${model_file}`;
-}
-
-function get_tryout_url(model_id){
-  return `${ASSET_URL}/${model_id}/in.jpg`;
-}
-
 
 /**
+ *  Arguments:
+ *      Given model file and product id, applies the product and outputs 
+ *      updated model file
  *  Returns:
- *      (dict): "new_model_file":"farfetch_12979466-farfetch_13956851-farfetch_14893172-farfetch_12779825",
+ *      (str): new model file name
  */
-async function generate_model_and_product(model_file, product_id){
+async function generateModelAndProduct(model_file, product_id){
 
   try{
     const params = {model_file, product_id};
@@ -68,4 +60,14 @@ async function generate_model_and_product(model_file, product_id){
   } catch(e){
     window.alert(`Server communication failed with ${e}`);
   }
+}
+
+
+/* Helper function for image / products */
+function getImageUrl(model_file){
+  return `${API_URL}/get_image?model_file=${model_file}`;
+}
+
+function getProductUrl(product_id){
+  return `${ASSET_URL}/${product_id}/in.jpg`;
 }
